@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <data>
+        <variable
+            name="collectVoterDataVM"
+            type="org.allamericateam.test.activities.CollectVoterDataActivity" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_bg"
+        tools:context=".activities.CollectVoterDataActivity">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Are you a registered voter?"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline4"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline4"
+            app:layout_constraintVertical_bias="0.0">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                >
+
+                <EditText
+                    android:id="@+id/et_last_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:ems="10"
+                    android:hint="Last name"
+                    android:inputType="textPersonName"
+                    android:drawableEnd="@drawable/ic_baseline_person_outline_24"
+                    app:layout_constraintBottom_toTopOf="@+id/et_email"
+                    app:layout_constraintEnd_toEndOf="@+id/et_email"
+                    app:layout_constraintStart_toStartOf="@+id/et_email"
+                    app:layout_constraintTop_toBottomOf="@+id/et_middle_name" />
+
+                <EditText
+                    android:id="@+id/et_middle_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:ems="10"
+                    android:hint="Middle name"
+                    android:inputType="textPersonName"
+                    android:drawableEnd="@drawable/ic_baseline_person_outline_24"
+                    app:layout_constraintBottom_toTopOf="@+id/et_last_name"
+                    app:layout_constraintEnd_toEndOf="@+id/et_last_name"
+                    app:layout_constraintStart_toStartOf="@+id/et_last_name"
+                    app:layout_constraintTop_toBottomOf="@+id/et_first_name" />
+
+                <EditText
+                    android:id="@+id/et_first_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:ems="10"
+                    android:hint="First name"
+                    android:inputType="textPersonName"
+                    android:drawableEnd="@drawable/ic_baseline_person_24"
+                    app:layout_constraintBottom_toTopOf="@+id/et_middle_name"
+                    app:layout_constraintEnd_toEndOf="@+id/et_middle_name"
+                    app:layout_constraintStart_toStartOf="@+id/et_middle_name"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/et_ssn_last_4digit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:ems="10"
+                    android:hint="Ssn last 4 digits"
+                    android:inputType="number"
+                    android:drawableEnd="@drawable/ic_baseline_lock_grey_24"
+                    app:layout_constraintBottom_toTopOf="@+id/et_dob"
+                    app:layout_constraintEnd_toEndOf="@+id/et_dob"
+                    app:layout_constraintStart_toStartOf="@+id/et_dob"
+                    app:layout_constraintTop_toBottomOf="@+id/et_dl_id" />
+
+                <EditText
+                    android:id="@+id/et_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:ems="10"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:drawableEnd="@drawable/ic_baseline_email_grey_24"
+                    app:layout_constraintBottom_toTopOf="@+id/et_dl_id"
+                    app:layout_constraintEnd_toEndOf="@+id/et_dl_id"
+                    app:layout_constraintStart_toStartOf="@+id/et_dl_id"
+                    app:layout_constraintTop_toBottomOf="@+id/et_last_name" />
+
+                <EditText
+                    android:id="@+id/et_dob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:clickable="true"
+                    android:cursorVisible="false"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:drawableEnd="@drawable/ic_baseline_event_24"
+                    android:hint="DOB"
+                    android:onClick="@{() -> collectVoterDataVM.selectDOB()}"
+                    android:text="@{collectVoterDataVM.dateOfBirth}"
+                    app:layout_constraintBottom_toTopOf="@+id/textView8"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/et_ssn_last_4digit" />
+
+                <EditText
+                    android:id="@+id/et_dl_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:ems="10"
+                    android:hint="Driver License #"
+                    android:inputType="textPersonName"
+                    android:drawableEnd="@drawable/ic_baseline_directions_car_24"
+                    app:layout_constraintBottom_toTopOf="@+id/et_ssn_last_4digit"
+                    app:layout_constraintEnd_toEndOf="@+id/et_ssn_last_4digit"
+                    app:layout_constraintStart_toStartOf="@+id/et_ssn_last_4digit"
+                    app:layout_constraintTop_toBottomOf="@+id/et_email" />
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center"
+                    android:text="Voter"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toTopOf="@+id/rg_registered_voter"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/et_dob"
+                    app:layout_constraintVertical_bias="0.52" />
+
+                <RadioGroup
+                    android:id="@+id/rg_registered_voter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.498"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView8">
+
+
+                    <RadioButton
+                        android:id="@+id/radioRegisteredVoter"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="Registered " />
+
+                    <RadioButton
+                        android:id="@+id/radioUnregisteredVoter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Unregistered" />
+
+                </RadioGroup>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </ScrollView>
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/main_red"
+            android:onClick="@{() -> collectVoterDataVM.uploadData()}"
+            android:text="Save"
+            android:textColor="#D6E0F0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scrollView2"
+            app:layout_constraintVertical_bias="0.78" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.12" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

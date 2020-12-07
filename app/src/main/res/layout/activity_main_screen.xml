@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="mainScreenVM"
+            type="org.allamericateam.test.activities.MainScreenActivity" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_bg"
+        tools:context=".activities.MainScreenActivity">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:text="@string/main_title_text"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+            app:layout_constraintEnd_toStartOf="@+id/tableLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TableLayout
+            android:id="@+id/tableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline2">
+
+            <TableRow
+                android:id="@+id/tableRow1"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/btn_sign_the_ballot"
+                    android:layout_width="0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/ic_baseline_edit_24"
+                    android:onClick="@{() -> mainScreenVM.showDocumentsForVoters()}"
+                    android:text="@string/main_btn_sign_decoration_text"
+                    android:gravity="bottom|center"
+                    android:backgroundTint="@color/white"
+                    />
+
+                <Button
+                    android:id="@+id/btn_voter_data"
+                    android:layout_width="0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/ic_baseline_ballot_24"
+                    android:onClick="@{() -> mainScreenVM.doVoterData()}"
+                    android:text="@string/main_btn_voter_data_text"
+                    android:gravity="bottom|center"
+                    android:backgroundTint="@color/white"
+                    />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow2"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/btn_send_ballot"
+                    android:layout_width="0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/ic_baseline_how_to_vote_24"
+                    android:onClick="@{() -> mainScreenVM.showDocumentsForCirculator()}"
+                    android:text="@string/main_btn_send_petition_text"
+                    android:gravity="bottom|center"
+                    android:backgroundTint="@color/white"/>
+
+                <Button
+                    android:id="@+id/btn_summary"
+                    android:layout_width="0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/ic_baseline_assignment_24"
+                    android:onClick="@{() -> mainScreenVM.doShowSummary()}"
+                    android:text="@string/main_btn_summary_text"
+                    android:gravity="bottom|center"
+                    android:backgroundTint="@color/white"/>
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow3"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/btn_send_email"
+                    android:layout_width="0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/ic_baseline_email_red_100"
+                    android:onClick="@{() -> mainScreenVM.doSendEmailForUnregisteredVoter()}"
+                    android:text="@string/main_btn_send_email_text"
+                    android:gravity="bottom|center"
+                    android:backgroundTint="@color/white"/>
+
+                <Button
+                    android:id="@+id/btn_logout"
+                    android:layout_width="0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/ic_baseline_exit_to_app_24"
+                    android:onClick="@{() -> mainScreenVM.doLogout()}"
+                    android:text="@string/main_btn_logout_text"
+                    android:gravity="bottom|center"
+                    android:backgroundTint="@color/white"/>
+
+
+            </TableRow>
+
+        </TableLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="128dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

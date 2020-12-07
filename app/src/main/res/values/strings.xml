@@ -1,0 +1,75 @@
+<resources>
+    <string name="app_name">Petition Circulator</string>
+    <string name="docusign_integration_key">9fb38499-d59d-48f9-a652-6e553591d582</string> <!-- Known as client id -->
+    <string name="docusign_client_secret_key">24b0b170-2de1-4786-8dd7-851accfeb49a</string>
+    <string name="docusign_api_account_id">43f94970-9d73-4236-ba1c-bab3ab10605a</string>
+    <string name="docusign_user_id">975ec789-da51-4ef9-876a-d7ff961871c5</string>
+    <string name="docusign_account_id">11195277</string>
+    <string name="account_base_uri">https://demo.docusign.net/restapi/v2.1/accounts/</string>
+    <string name="docusign_base_uri">https://demo.docusign.net/restapi/v2.1/</string>
+
+    <string name="here_app_id">okelR7N8IarPbJhP283c</string>
+    <string name="here_app_key_id">70QRLe6-IbUqeEbUthwXUA</string>
+    <string name="here_app_key_secret">U_DICe2u20O5Q4Xj2V_tk7gcqQ0QemEo_2pelBlim56PF7uzqMIcHHnEl-cPG8htxNi7oP5qp03lvolBHgIPzw</string>
+
+    <!-- Oauth token will be expired in every 8 hours -->
+    <!--<string name="docusign_oauth_token">eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjY4MTg1ZmYxLTRlNTEtNGNlOS1hZjFjLTY4OTgxMjIwMzMxNyJ9.eyJUb2tlblR5cGUiOjUsIklzc3VlSW5zdGFudCI6MTU5NzY0MjYwMiwiZXhwIjoxNTk3NjcxNDAyLCJVc2VySWQiOiI5NzVlYzc4OS1kYTUxLTRlZjktODc2YS1kN2ZmOTYxODcxYzUiLCJzaXRlaWQiOjEsInNjcCI6WyJzaWduYXR1cmUiLCJjbGljay5tYW5hZ2UiLCJvcmdhbml6YXRpb25fcmVhZCIsInJvb21fZm9ybXMiLCJncm91cF9yZWFkIiwicGVybWlzc2lvbl9yZWFkIiwidXNlcl9yZWFkIiwidXNlcl93cml0ZSIsImFjY291bnRfcmVhZCIsImRvbWFpbl9yZWFkIiwiaWRlbnRpdHlfcHJvdmlkZXJfcmVhZCIsImR0ci5yb29tcy5yZWFkIiwiZHRyLnJvb21zLndyaXRlIiwiZHRyLmRvY3VtZW50cy5yZWFkIiwiZHRyLmRvY3VtZW50cy53cml0ZSIsImR0ci5wcm9maWxlLnJlYWQiLCJkdHIucHJvZmlsZS53cml0ZSIsImR0ci5jb21wYW55LnJlYWQiLCJkdHIuY29tcGFueS53cml0ZSJdLCJhdWQiOiJmMGYyN2YwZS04NTdkLTRhNzEtYTRkYS0zMmNlY2FlM2E5NzgiLCJhenAiOiJmMGYyN2YwZS04NTdkLTRhNzEtYTRkYS0zMmNlY2FlM2E5NzgiLCJpc3MiOiJodHRwczovL2FjY291bnQtZC5kb2N1c2lnbi5jb20vIiwic3ViIjoiOTc1ZWM3ODktZGE1MS00ZWY5LTg3NmEtZDdmZjk2MTg3MWM1IiwiYXV0aF90aW1lIjoxNTk3NjQyNDQ3LCJwd2lkIjoiZjk1MjE4NWMtNmUxNi00MDUwLWJiMzktZmJmMWIzOTkxZWY0In0.DKAOCikJk6gVDcBpJud7jeJ704RAx-7HzAGJHtEKDqlzOjn4ZNvbbbvqA-GFwcrSy3WLG1HvjqlloCw53wF3SDZZFxxkQH5yeB6G8Fx9ja03ZtNd8N9fXuSGDcmKsYurWQ64fwfNvTIbVcagD19GyPI9sIg-vPFpMTBAlSWFaEYg2PlQl4u2x6FZCjDOVL6b8wzDBDTlyJLqZglxBuEesHfiPnUe0qT9HVpa9pdomimBuYUFpO8J5cYdOfF0Bm9jewzognz78jGeyiFiMRJhq4chFGEVywu1cBy1LCs5GAakA58pWnZIRzDUO1Lo36ly3nOnYQDgPw44WYqLn7h8Hg</string>-->
+
+    <!-- FirebaseDB base url -->
+    <string name="firebase_db_base_uri">/users</string>
+
+
+    <!-- splash screen -->
+    <string name="splash_intro_text">Welcome to Petition Circulator</string>
+
+    <!-- main screen -->
+    <string name="main_title_text">Main Options</string>
+    <string name="main_btn_sign_decoration_text">Sign the declaration</string>
+    <string name="main_btn_voter_data_text">Voter data</string>
+    <string name="main_btn_send_petition_text">Send petition</string>
+    <string name="main_btn_logout_text">Logout</string>
+    <string name="main_btn_summary_text">Summary</string>
+    <string name="main_btn_send_email_text">Send email</string>
+
+
+    <!-- summary screen -->
+    <string name="petition_sent">petition_sent</string>
+
+
+    <string name="redirect_uri">https://www.allamericateam.org</string>
+    <string name="title_activity_main">MainActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+
+    <string name="main_screen_email_subject">California Online Voter Registration Request</string>
+    <string name="main_screen_email_content">
+        To register online you will need:\n\n
+
+        Your California driver license or California identification card number,\n
+        The last four digits of your social security number and\n
+        Your date of birth.\n\n
+        Your information will be provided to the California Department of Motor Vehicles (DMV) to retrieve a copy of your DMV signature.\n
+
+        https://registertovote.ca.gov/ \n\n
+        Thank you for your cooperation.\n\n
+
+        Best,\n
+        Petiton Circulator Team
+    </string>
+
+
+    <string name="open_source_license_text">
+
+
+
+    </string>
+
+
+</resources>
