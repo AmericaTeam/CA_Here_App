@@ -1,11 +1,10 @@
 # Petition_Circulator
-Petition Circulator for Docusign Good Code Hackathon
+Petition Circulator with Here API
 
 <br>
-Petition Circulator is an application that increases the efficiency of collecting registered voter’s signatures for petitions. Thanks to DocuSign, the circulators can collect signatures without potential threat from Covid-19.
+Petition Circulator is an application that increases the efficiency of collecting registered voter’s signatures for petitions.
+Combine with Here API, showing map data at the same time.
 
-<h2>Our demo video is available</h2>
-<a href="https://youtu.be/hX_Gle9lCio">https://youtu.be/hX_Gle9lCio</a>
 
 
 <p>
