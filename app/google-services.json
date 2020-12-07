@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "535862103156",
+    "firebase_url": "https://ballot-community.firebaseio.com",
+    "project_id": "ballot-community",
+    "storage_bucket": "ballot-community.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:535862103156:android:822d7ea2b418101bb29521",
+        "android_client_info": {
+          "package_name": "org.allamericateam.test"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "535862103156-r26kq03km4avikpoqrt6rh7rh3vcqcji.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkrBW8xkQsY9Z3Q6TLR8ITdHLmVin-d-A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "535862103156-r26kq03km4avikpoqrt6rh7rh3vcqcji.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
